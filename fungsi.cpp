@@ -2,14 +2,8 @@
 #include <cmath>
 #include <string>
 #include <emscripten.h>
-#include "windows.h"
 
 using namespace std;
-
-void myprint(const wchar_t* str){
-        HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
-        WriteConsoleW(h, str, wcslen(str), NULL, NULL);
-    }
 
 extern "C" {
     EMSCRIPTEN_KEEPALIVE
@@ -19,8 +13,7 @@ extern "C" {
         int x = awal;
         int y = akhir;
 
-        string satuan[]={"Tera ohm", "Giga ohm", "Mega ohm", "kilo ohm", "ohm", "mili ohm", "mikro ohm", "nano ohm", "pico ohm"};
-        wstring st [] = {L"TΩ", L"GΩ", L"MΩ", L"kΩ", L"Ω", L"mΩ", L"μΩ", L"nΩ", L"pΩ"};
+        string satuan[]={"Tera ohm (TΩ)", "Giga ohm (GΩ)", "Mega ohm (MΩ)", "kilo ohm (kΩ)", "ohm (Ω)", "mili ohm (mΩ)", "mikro ohm (μΩ)", "nano ohm (nΩ)", "pico ohm (pΩ)"};
 
         if (x > 5){
                 int z = x - 5;
@@ -43,10 +36,10 @@ extern "C" {
             long double hasil_mega = hasil_ohm / pow(1000, 2);
             long double hasil_mikro = hasil_ohm * pow(1000, 2);
 
-            cout << nilai << " " << satuan[awal - 1] << " "; wcout << "("; myprint(st[awal-1].c_str()); wcout << ")"; cout << " = " << hasil << " " << satuan[akhir - 1] << " "; wcout << "("; myprint(st[akhir-1].c_str()); wcout << ")" << endl;
-            cout << nilai << " " << satuan[awal - 1] << " "; wcout << "("; myprint(st[awal-1].c_str()); wcout << ")"; cout << " = " << hasil_mega << " " << satuan[2] << " "; wcout << "("; myprint(st[2].c_str()); wcout << ")" << endl;
-            cout << nilai << " " << satuan[awal - 1] << " "; wcout << "("; myprint(st[awal-1].c_str()); wcout << ")"; cout << " = " << hasil_ohm << " " << satuan[4] << " "; wcout << "("; myprint(st[4].c_str()); wcout << ")" << endl;
-            cout << nilai << " " << satuan[awal - 1] << " "; wcout << "("; myprint(st[awal-1].c_str()); wcout << ")"; cout << " = " << hasil_mikro << " " << satuan[6] << " "; wcout << "("; myprint(st[6].c_str()); wcout << ")" << endl;
+            cout << nilai << " " << satuan[awal - 1] << " = " << hasil << " " << satuan[akhir - 1] << endl;
+            cout << nilai << " " << satuan[awal - 1] << " = " << hasil_mega << " " << satuan[2] << endl;
+            cout << nilai << " " << satuan[awal - 1] << " = " << hasil_ohm << " " << satuan[4] << endl;
+            cout << nilai << " " << satuan[awal - 1] << " = " << hasil_mikro << " " << satuan[6] << endl;
 
 
             return hasil;
