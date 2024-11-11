@@ -36,12 +36,6 @@ extern "C" {
             long double hasil_mega = hasil_ohm / pow(1000, 2);
             long double hasil_mikro = hasil_ohm * pow(1000, 2);
 
-            cout << nilai << " " << satuan[awal - 1] << " = " << hasil << " " << satuan[akhir - 1] << endl;
-            cout << nilai << " " << satuan[awal - 1] << " = " << hasil_mega << " " << satuan[2] << endl;
-            cout << nilai << " " << satuan[awal - 1] << " = " << hasil_ohm << " " << satuan[4] << endl;
-            cout << nilai << " " << satuan[awal - 1] << " = " << hasil_mikro << " " << satuan[6] << endl;
-
-
             return hasil;
     }
 
