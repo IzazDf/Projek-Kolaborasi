@@ -13,6 +13,7 @@ extern "C" {
         int x = awal;
         int y = akhir;
 
+        //perubahan
         string satuan[]={"Tera ohm (TΩ)", "Giga ohm (GΩ)", "Mega ohm (MΩ)", "kilo ohm (kΩ)", "ohm (Ω)", "mili ohm (mΩ)", "mikro ohm (μΩ)", "nano ohm (nΩ)", "pico ohm (pΩ)"};
 
         if (x > 5){
