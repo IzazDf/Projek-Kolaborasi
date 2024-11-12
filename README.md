@@ -1,6 +1,6 @@
 # Judul
 
-![Status Build](https://img.shields.io/badge/build-passing-brightgreen) ![Lisensi](https://img.shields.io/badge/license-MIT-blue)
+![Status Build](https://img.shields.io/badge/build-In_Progress-brightgreen) ![Lisensi](https://img.shields.io/badge/license-MIT-blue)
 
 Deskripsi singkat tentang proyek Anda, apa tujuannya, dan manfaat yang diharapkan dari penggunaannya.
 
